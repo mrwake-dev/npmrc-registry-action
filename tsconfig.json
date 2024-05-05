@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"rootDir": "./src",
+		"strict": true,
+		"noImplicitAny": true,
+		"esModuleInterop": true,
+		"lib": [
+			"ES2020.String"
+		]
+	},
+	"include": [
+		"./**/*.ts",
+	  ],
+	"exclude": [
+		"node_modules"
+	]
+}
