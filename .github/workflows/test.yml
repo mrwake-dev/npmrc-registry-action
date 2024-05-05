@@ -16,7 +16,7 @@ jobs:
         with:
           node-version-file: 'package.json'
       - name: Login NPM registry
-        uses: mrwake-dev/npmrc-registry-action@1.0.0
+        uses: ./
         with:
           scope: '@mrwake-dev'
           registry: 'https://npm.pkg.github.com'
