@@ -1,0 +1,23 @@
+name: 'test'
+
+on:
+    push:
+      branches:
+        - main
+    pull_request:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+      - name: Login NPM registry
+        uses: mrwake-dev/npmrc-registry-action@1.0.0
+        with:
+          scope: '@mrwake-dev'
+          registry: 'https://npm.pkg.github.com'
+          auth-token: ${{ secrets.PAT_CONTAINER_TOKEN }}
